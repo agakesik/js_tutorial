@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 
 let request = require("request");
 let Phrase = require("aga-palindrome");
