@@ -3,11 +3,12 @@ let Phrase = require("aga-palindrome");
 function palindromeTester() {
   let string = prompt(" enter a string for palindrome:")
   let phrase = new Phrase(string);
+  let palindromeResult = document.querySelector("#palindromeResult");
 
   if (phrase.palindrome()) {
-    alert(`"${phrase.content}" is a palindrome :D`);
+    palindromeResult.innerHTML = `"<strong>${phrase.content}</strong>" is a palindrome :D`;
   } else {
-    alert(`${phrase.content} is not a palindrome. :C`);
+    palindromeResult.innerHTML = `"<strong>${phrase.content}</strong>" is not a palindrome. :C`;
   }
 }
 document.addEventListener("DOMContentLoaded", function(){
